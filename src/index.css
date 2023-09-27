@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+:root {
+  --dark: hsl(235, 24%, 19%);
+  --light: hsl(0, 0%, 98%);
+  --lighter: hsl(236, 9%, 61%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--light);
+  background-color: hsl(235, 21%, 11%);
+  min-height: 100vh;
+  font-size: 1rem;
+}
+
+.complete {
+  text-decoration: line-through;
+  color: hsl(236, 9%, 61%);
+}
+
+.done {
+  background-color: var(--lighter);
+}
+
+.hide {
+  display: none;
+}
+
+.link {
+  cursor: pointer;
+  color: hsl(236, 9%, 61%);
+}
+
+.link:hover {
+  color: hsl(236, 33%, 92%);
+}
+
+.active {
+  color: hsl(220, 98%, 61%);
+}
+
+.app {
+  position: relative;
+}
+
+.app::before {
+  position: absolute;
+  content: "";
+  height: 350px;
+  width: 100%;
+  background: linear-gradient(
+      hsl(192, 100%, 67%, 0.15),
+      hsl(280, 87%, 65%, 0.15)
+    ),
+    url(../src/assets/bg-desktop-dark.jpg);
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.logo {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.add-task-form {
+  margin: 40px 0;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  background-color: var(--dark);
+  color: var(--light);
+  border: none;
+  padding: 18px 18px 18px 50px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: var(--lighter);
+}
+
+input:focus-visible {
+  border: none !important;
+  outline: none !important;
+}
+
+.add-task-form::before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  border: 1px solid #666;
+  top: 15px;
+  left: 20px;
+}
+
+.tasklist {
+  background-color: var(--dark);
+  padding: 0;
+  border-radius: 5px;
+}
+
+.task {
+  padding: 18px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--lighter);
+  list-style: none;
+}
+
+.radio {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid #666;
+  margin-right: 15px;
+}
+
+.task p {
+  display: flex;
+  align-items: center;
+}
+
+.controller {
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  color: hsl(236, 9%, 61%);
+}
+
+.control {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control li {
+  margin: 0 15px;
+}
