@@ -41,6 +41,34 @@ function App() {
           />
           <Controller tasks={tasks} onClearComplete={handleClearComplete} />
         </div>
+        <footer
+        className="attribution"
+        style={{
+          backgroundColor: "#333",
+          color: "#fff",
+          padding: "10px",
+          textAlign: "center",
+        }}
+      >
+        <p style={{ fontSize: "14px", wordSpacing: "6px" }}>
+          Challenge by{" "}
+          <a
+            href="https://www.frontendmentor.io/profile/ahmad-majid"
+            target="noopener"
+            style={{ color: "#fff", textDecoration: "none" }}
+          >
+            Frontend Mentor
+          </a>
+          . Coded by{" "}
+          <a
+            href="https://www.linkedin.com/in/ahmad-majid-957ba9200"
+            target="noopener"
+            style={{ color: "#fff", textDecoration: "none" }}
+          >
+            Ahmad Majid
+          </a>
+        </p>
+      </footer>
       </div>
     </>
   );
